@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\AdminController;
+use App\Http\Controllers\Admin\BranchController;
 
 Route::group(
     ['prefix' => 'admin'],
@@ -13,6 +14,7 @@ Route::group(
             function () {
                 Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('admin-dashboard');
                 Route::get('/logout', [Admincontroller::class, 'adminLogout'])->name('admin-logout');
+                Route::get('/branch', [BranchController::class, 'create'])->name('admin-branch-create');
             }
         );
     }
