@@ -15,6 +15,7 @@ Route::group(
                 Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('admin-dashboard');
                 Route::get('/logout', [Admincontroller::class, 'adminLogout'])->name('admin-logout');
                 Route::get('/branch', [BranchController::class, 'create'])->name('admin-branch-create');
+                Route::post('/branch', [BranchController::class, 'store'])->name('admin-branch-store');
             }
         );
     }

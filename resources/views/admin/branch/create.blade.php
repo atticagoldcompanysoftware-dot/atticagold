@@ -26,7 +26,7 @@
                         <div class="card">
                             <div class="card-body">
 
-                                <form method="post" action="">
+                                <form method="post" action="{{ route('admin-branch-store') }}">
                                     @csrf
 
 
@@ -142,6 +142,9 @@
                                     </div>
 
 
+
+
+
                                     <div class="row mb-3">
                                         <div class="col-sm-3">
                                             <h6 class="mb-0">Branch Day</h6>
@@ -156,7 +159,18 @@
                                             @enderror
                                         </div>
                                     </div>
+                                    <div class="row mb-3">
+                                        <div class="col-sm-3">
+                                            <h6 class="mb-0">Branch Address</h6>
+                                        </div>
+                                        <div class="col-sm-9 text-secondary">
+                                            <textarea class="form-control" name="address" id="input11" placeholder="Branch Address ..." rows="3"></textarea>
 
+                                            @error('address')
+                                                <span class="text-danger">{{ $message }}</span>
+                                            @enderror
+                                        </div>
+                                    </div>
                                     <div class="row">
                                         <div class="col-sm-3"></div>
                                         <div class="col-sm-9 text-secondary">
