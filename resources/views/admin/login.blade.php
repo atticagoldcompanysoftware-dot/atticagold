@@ -34,7 +34,7 @@
                             <div class="card-body">
                                 <div class="p-4">
                                     <div class="mb-3 text-center">
-                                        <img src="{{ asset('admin/assets/images/logo-icon.png>') }}" width="60"
+                                        <img src="{{ asset('admin/assets/images/logo-icon.png') }}" width="60"
                                             alt="" />
                                     </div>
                                     <div class="text-center mb-4">

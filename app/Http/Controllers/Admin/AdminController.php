@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use Auth;
+use Illuminate\Support\Facades\Auth;
 
 class AdminController extends Controller
 {
@@ -14,12 +14,15 @@ class AdminController extends Controller
     }
     public function loginPost(Request $request)
     {
-        // dd($request->all());
+        $request->validate([
+            'email' => ['required', 'email'],
+            'password' => ['required'],
+        ]);
+
         $credentials = $request->only('email', 'password');
-        $credentials['password'] = $request->password;
-        // dd($credentials);
+
         if (Auth::guard('admin')->attempt($credentials)) {
-            // dd('hi');
+            $request->session()->regenerate();
             $notification1 = array(
                 'message' => 'Admin Login Successfully',
                 'alert-type' => 'success'
