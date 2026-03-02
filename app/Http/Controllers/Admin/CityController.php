@@ -18,7 +18,7 @@ class CityController extends Controller
 
 
 
-        public function store(Request $request)
+    public function store(Request $request)
     {
         $request->validate([
             'state_id' => 'required',
