@@ -702,12 +702,14 @@
         }
 
         .branch-card {
+            display: block;
             background: var(--white);
             border-radius: 16px;
             padding: 24px;
             border: 1px solid rgba(212, 168, 67, 0.12);
             transition: all 0.3s;
-            cursor: default;
+            cursor: pointer;
+            text-decoration: none;
         }
 
         .branch-card:hover {
@@ -1702,6 +1704,20 @@
         }
 
         // Render branches
+        function escapeHtml(value) {
+            return String(value || '')
+                .replace(/&/g, '&amp;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;')
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&#39;')
+        }
+
+        function getBranchUrl(branch) {
+            if (!branch || !branch.slug) return '#'
+            return '/' + encodeURIComponent(branch.slug)
+        }
+
         function renderBranches() {
             var search = document.getElementById('branchSearch').value.toLowerCase()
             var selectedState = stateFilter.value
@@ -1736,11 +1752,13 @@
             var html = ''
             filtered.forEach(function(b) {
                 html +=
-                    '<div class="branch-card"><h4>' +
-                    b.name +
+                    '<a class="branch-card" href="' +
+                    getBranchUrl(b) +
+                    '"><h4>' +
+                    escapeHtml(b.name) +
                     '</h4><p>' +
-                    b.addr +
-                    '</p></div>'
+                    escapeHtml(b.addr) +
+                    '</p></a>'
             })
             grid.innerHTML = html
         }
