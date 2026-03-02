@@ -35,4 +35,10 @@ class StateController extends Controller
 
         return redirect()->route('admin-state-create')->with($notification);
     }
+
+    public function index()
+    {
+        $datas = State::latest()->get();
+        return view('admin.state.index', compact('datas'));
+    }
 }
