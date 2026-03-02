@@ -40,5 +40,7 @@ class StateController extends Controller
     {
         $datas = State::latest()->get();
         return view('admin.state.index', compact('datas'));
+
+        
     }
 }
