@@ -61,7 +61,7 @@ class BranchController extends Controller
             'alert-type' => 'success'
         ];
 
-        return redirect()->route('admin-branch-create')->with($notification);
+        return redirect()->route('admin-branch-index')->with($notification);
     }
 
     public function index()
@@ -73,10 +73,38 @@ class BranchController extends Controller
 
 
     public function edit($id)
-    {   
+    {
         $states = State::latest()->get();
         $cities = City::latest()->get();
         $data = Branch::findOrFail($id);
         return view('admin.branch.edit', compact('data', 'states', 'cities'));
+    }
+
+
+
+    public function update(Request $request)
+    {
+        $id = $request->id;
+
+        Branch::findOrFail($id)->update([
+            'name' => $request->name,
+            'address' => $request->address,
+            'area' => $request->area,
+            'state_id' => $request->state_id,
+            'city_id' => $request->city_id,
+            'pincode' => $request->pincode,
+            'map' => $request->map,
+            'time' => $request->time,
+            'day' => $request->day,
+            'updated_at' => Carbon::now()
+        ]);
+
+
+        $notification = [
+            'message' => 'Branch Updated Successfully',
+            'alert-type' => 'success'
+        ];
+
+        return redirect()->route('admin-branch-index')->with($notification);
     }
 }
