@@ -47,8 +47,8 @@
                                     <td>{{ $item->name }}</td>
                                     <td>{{ $item->address }}</td>
                                     <td>{{ $item->area }}</td>
-                                    <td>{{ $item->state_id }}</td>
-                                    <td>{{ $item->city_id }}</td>
+                                    <td>{{ $item->state->name }}</td>
+                                    <td>{{ $item->city->name }}</td>
                                     <td>{{ $item->pincode }}</td>
                                     <td>{{ $item->map }}</td>
                                     <td>{{ $item->time }}</td>
