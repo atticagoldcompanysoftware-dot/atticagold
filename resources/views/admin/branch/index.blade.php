@@ -38,6 +38,8 @@
                                 <th> Branch Map </th>
                                 <th> Branch Time </th>
                                 <th> Branch Day </th>
+                                <th>Action</th>
+
                             </tr>
                         </thead>
                         <tbody>
@@ -53,6 +55,9 @@
                                     <td>{{ $item->map }}</td>
                                     <td>{{ $item->time }}</td>
                                     <td>{{ $item->day }}</td>
+                                    <td>
+                                        <a href="{{ route('admin-branch-edit', $item->id) }}" class="btn btn-info">Edit</a>
+                                    </td>
                                 </tr>
                             @endforeach
                         </tbody>
@@ -68,6 +73,8 @@
                                 <th> Branch Map </th>
                                 <th> Branch Time </th>
                                 <th> Branch Day </th>
+                                <th>Action</th>
+
                             </tr>
                         </tfoot>
                     </table>

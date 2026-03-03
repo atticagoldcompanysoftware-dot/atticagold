@@ -25,6 +25,7 @@ Route::group(
                 Route::get('/branch', [BranchController::class, 'create'])->name('admin-branch-create');
                 Route::post('/branch', [BranchController::class, 'store'])->name('admin-branch-store');
                 Route::get('/branches', [BranchController::class, 'index'])->name('admin-branch-index');
+                Route::get('/branche/edit/{id}', [BranchController::class, 'edit'])->name('admin-branch-edit');
             }
         );
     }

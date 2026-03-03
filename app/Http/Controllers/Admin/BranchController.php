@@ -69,4 +69,14 @@ class BranchController extends Controller
         $datas = Branch::latest()->get();
         return view('admin.branch.index', compact('datas'));
     }
+
+
+
+    public function edit($id)
+    {   
+        $states = State::latest()->get();
+        $cities = City::latest()->get();
+        $data = Branch::findOrFail($id);
+        return view('admin.branch.edit', compact('data', 'states', 'cities'));
+    }
 }
