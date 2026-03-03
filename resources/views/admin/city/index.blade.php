@@ -29,7 +29,7 @@
                         <thead>
                             <tr>
                                 <th>Sl</th>
-                                <th> State Id </th>
+                                <th> State Name </th>
                                 <th> City Name </th>
                             </tr>
                         </thead>
@@ -37,7 +37,7 @@
                             @foreach ($datas as $key => $item)
                                 <tr>
                                     <td> {{ $key + 1 }} </td>
-                                    <td>{{ $item->state_id }}</td>
+                                    <td>{{ $item->state->name }}</td>
                                     <td>{{ $item->name }}</td>
                                 </tr>
                             @endforeach
@@ -45,7 +45,7 @@
                         <tfoot>
                             <tr>
                                 <th>Sl</th>
-                                <th> State Id </th>
+                                <th> State Name</th>
                                 <th> City Name </th>
                             </tr>
                         </tfoot>
