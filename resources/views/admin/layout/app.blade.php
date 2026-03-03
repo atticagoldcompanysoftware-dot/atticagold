@@ -25,6 +25,9 @@
     <link rel="stylesheet" href="{{ asset('admin/assets/css/dark-theme.css') }}" />
     <link rel="stylesheet" href="{{ asset('admin/assets/css/semi-dark.css') }}" />
     <link rel="stylesheet" href="{{ asset('admin/assets/css/header-colors.css') }}" />
+    <!-- DataTable -->
+    <link href="{{ asset('admin/assets/plugins/datatable/css/dataTables.bootstrap5.min.css') }}" rel="stylesheet" />
+    <!-- DataTable-->
     <title>Rocker - Bootstrap 5 Admin Dashboard Template</title>
 </head>
 
@@ -253,6 +256,21 @@
     <script src="{{ asset('admin/assets/js/app.js') }}"></script>
     <script>
         new PerfectScrollbar(".app-container")
+    </script>
+    <!-- Required datatable js -->
+    <script src="{{ asset('admin/assets/libs/datatables.net/js/jquery.dataTables.min.js') }}"></script>
+    <script src="{{ asset('admin/assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js') }}"></script>
+
+    <!-- Datatable init js -->
+    <script src="{{ asset('admin/assets/js/pages/datatables.init.js') }}"></script>
+
+
+    <!--Datatable-->
+    <script src="{{ asset('admin/assets/plugins/datatable/js/jquery.dataTables.min.js') }}"></script>
+    <script>
+        $(document).ready(function() {
+            $('#example').DataTable();
+        });
     </script>
 </body>
 
