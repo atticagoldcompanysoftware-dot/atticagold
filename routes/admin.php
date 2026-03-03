@@ -21,6 +21,7 @@ Route::group(
                 Route::get('/states', [StateController::class, 'index'])->name('admin-state-index');
                 Route::get('/city', [CityController::class, 'create'])->name('admin-city-create');
                 Route::post('/city', [CityController::class, 'store'])->name('admin-city-store');
+                Route::get('/cities', [CityController::class, 'index'])->name('admin-city-index');
                 Route::get('/branch', [BranchController::class, 'create'])->name('admin-branch-create');
                 Route::post('/branch', [BranchController::class, 'store'])->name('admin-branch-store');
             }

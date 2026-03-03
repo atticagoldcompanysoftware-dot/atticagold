@@ -44,6 +44,8 @@
                     <ul>
                         <li> <a href="{{ route('admin-city-create') }}"><i class='bx bx-radio-circle'></i>Add City</a>
                         </li>
+                        <li> <a href="{{ route('admin-city-index') }}"><i class='bx bx-radio-circle'></i>All Cities</a>
+                        </li>
                     </ul>
                 </li>
 

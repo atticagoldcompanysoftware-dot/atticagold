@@ -42,4 +42,10 @@ class CityController extends Controller
 
         return redirect()->route('admin-city-create')->with($notification);
     }
+
+    public function index()
+    {
+        $datas = City::latest()->get();
+        return view('admin.city.index', compact('datas'));
+    }
 }
