@@ -60,7 +60,8 @@
                         <li> <a href="{{ route('admin-branch-create') }}"><i class='bx bx-radio-circle'></i>Add
                                 Branch</a>
                         </li>
-                        <li> <a href="app-chat-box.html"><i class='bx bx-radio-circle'></i>All Branches</a>
+                        <li> <a href="{{ route('admin-branch-index') }}"><i class='bx bx-radio-circle'></i>All
+                                Branches</a>
                         </li>
 
                     </ul>

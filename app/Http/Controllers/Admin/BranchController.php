@@ -63,4 +63,10 @@ class BranchController extends Controller
 
         return redirect()->route('admin-branch-create')->with($notification);
     }
+
+    public function index()
+    {
+        $datas = Branch::latest()->get();
+        return view('admin.branch.index', compact('datas'));
+    }
 }
