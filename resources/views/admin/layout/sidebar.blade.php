@@ -30,6 +30,8 @@
                     <ul>
                         <li> <a href="{{ route('admin-state-create') }}"><i class='bx bx-radio-circle'></i>Add State</a>
                         </li>
+                        <li> <a href="{{ route('admin-state-index') }}"><i class='bx bx-radio-circle'></i>All State</a>
+                        </li>
                     </ul>
                 </li>
 

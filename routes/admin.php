@@ -18,6 +18,7 @@ Route::group(
                 Route::get('/logout', [Admincontroller::class, 'adminLogout'])->name('admin-logout');
                 Route::get('/state', [StateController::class, 'create'])->name('admin-state-create');
                 Route::post('/state', [StateController::class, 'store'])->name('admin-state-store');
+                Route::get('/states', [StateController::class, 'index'])->name('admin-state-index');
                 Route::get('/city', [CityController::class, 'create'])->name('admin-city-create');
                 Route::post('/city', [CityController::class, 'store'])->name('admin-city-store');
                 Route::get('/branch', [BranchController::class, 'create'])->name('admin-branch-create');
