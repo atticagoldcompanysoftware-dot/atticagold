@@ -14,9 +14,9 @@ return new class extends Migration
     public function up()
     {
         Schema::table('branches', function (Blueprint $table) {
-            $table->string('title')->after('day')->nullable();
-            $table->string('keyword')->after('title')->nullable();
-            $table->string('description')->after('keyword')->nullable();
+            $table->text('title')->after('day')->nullable();
+            $table->text('keyword')->after('title')->nullable();
+            $table->text('description')->after('keyword')->nullable();
         });
     }
 
@@ -29,7 +29,6 @@ return new class extends Migration
     {
         Schema::table('branches', function (Blueprint $table) {
             $table->dropColumn([
-                'title',
                 'keyword',
                 'description'
             ]);

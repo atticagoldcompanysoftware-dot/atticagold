@@ -5,8 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Best Gold Buyers in {{ $branch->name }} | Attica Gold Company</title>
-    <meta name="description"
-        content="Attica Gold Company {{ $branch->name }} branch - Sell 22K & 24K gold jewellery for instant cash at live gold rate with German XRF testing. 100% transparent valuation.">
+    <meta property="og:title" content="Best Gold Buyers in {{ $branch->name }} | Attica Gold Company" />
+    <meta name="keywords" content="{{ $branch->keyword }}">
+    <meta name="description" content="{{ $branch->description }}">
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
@@ -210,7 +211,7 @@
 
     <section class="hero">
         <div class="container" data-aos="fade-up">
-            <h1>Sell Your <span>Gold</span> in {{ $branchName }}</h1>
+            <h1>Best Gold <span>Buyers</span> in {{ $branchName }}</h1>
             <p class="lead mb-4">Best Gold Buyers | 22K & 24K Gold | Live Gold Rate</p>
             <a href="tel:+918880300300" class="btn btn-gold"><i class="fa fa-phone-alt me-2"></i> Get Instant Cash</a>
         </div>
@@ -420,8 +421,7 @@
                             <a href="tel:+918880300300" class="btn btn-gold w-100 py-3">Call Branch</a>
                         </div>
                         <div class="col-sm-6">
-                            <a href="{{ $branchMap }}" target="_blank"
-                                class="btn btn-outline-danger w-100 py-3">
+                            <a href="{{ $branchMap }}" target="_blank" class="btn btn-outline-danger w-100 py-3">
                                 <i class="fa fa-directions me-2"></i>Directions
                             </a>
                         </div>

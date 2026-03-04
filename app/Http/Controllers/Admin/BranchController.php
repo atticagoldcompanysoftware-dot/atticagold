@@ -96,6 +96,9 @@ class BranchController extends Controller
             'map' => $request->map,
             'time' => $request->time,
             'day' => $request->day,
+            'title' => $request->title,
+            'keyword' => $request->keyword,
+            'description' => $request->description,
             'updated_at' => Carbon::now()
         ]);
 

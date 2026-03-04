@@ -27,6 +27,8 @@
     <link rel="stylesheet" href="{{ asset('admin/assets/css/header-colors.css') }}" />
     <!-- DataTable -->
     <link href="{{ asset('admin/assets/plugins/datatable/css/dataTables.bootstrap5.min.css') }}" rel="stylesheet" />
+
+    <link href="{{ asset('admin/assets/plugins/input-tags/css/tagsinput.css') }}" rel="stylesheet" />
     <!-- DataTable-->
     <title>Rocker - Bootstrap 5 Admin Dashboard Template</title>
 </head>
@@ -263,6 +265,8 @@
 
     <!-- Datatable init js -->
     <script src="{{ asset('admin/assets/js/pages/datatables.init.js') }}"></script>
+    <script src="{{ asset('admin/assets/plugins/input-tags/js/tagsinput.js') }}"></script>
+
 
 
     <!--Datatable-->

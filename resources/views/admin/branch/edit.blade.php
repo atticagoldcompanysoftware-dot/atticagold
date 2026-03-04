@@ -26,7 +26,7 @@
                         <div class="card">
                             <div class="card-body">
 
-                                <form method="post" action="{{ route("admin-branch-update") }}">
+                                <form method="post" action="{{ route('admin-branch-update') }}">
                                     @csrf
                                     <input type="hidden" name="id" value="{{ $data->id }}">
                                     <div class="row mb-3">
@@ -179,6 +179,47 @@
                                             @enderror
                                         </div>
                                     </div>
+
+                                    <div class="row mb-3">
+                                        <div class="col-sm-3">
+                                            <h6 class="mb-0">Meta Title</h6>
+                                        </div>
+                                        <div class="col-sm-9 text-secondary">
+                                            <input type="text" name="title"
+                                                class="form-control @error('title') is-invalid @enderror" id=""
+                                                placeholder="Enter Meta Title" value="{{ $data->title }}" />
+
+                                            @error('title')
+                                                <span class="text-danger">{{ $message }}</span>
+                                            @enderror
+                                        </div>
+                                    </div>
+
+                                    <div class="row mb-3">
+                                        <div class="col-sm-3">
+                                            <h6 class="mb-0">Meta Keyword</h6>
+                                        </div>
+                                        <div class="col-sm-9 text-secondary">
+                                            <input type="text" class="form-control" data-role="tagsinput"
+                                                name="keyword"
+                                                value="22K gold buyers,24K gold buyers,instant cash for gold,live gold rate" />
+                                        </div>
+                                    </div>
+
+
+
+                                    <div class="row mb-3">
+                                        <div class="col-sm-3">
+                                            <h6 class="mb-0">Meta Description</h6>
+                                        </div>
+                                        <div class="col-sm-9 text-secondary">
+                                            <textarea class="form-control" id="input11" name="description" placeholder="Meta Description" rows="3"></textarea>
+                                        </div>
+                                    </div>
+
+
+
+
 
 
                                     <div class="row">
