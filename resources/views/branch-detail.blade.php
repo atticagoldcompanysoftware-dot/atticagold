@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Best Gold Buyers in {{ $branch->name }} | Attica Gold Company</title>
-    <meta property="og:title" content="Best Gold Buyers in {{ $branch->name }} | Attica Gold Company" />
+    <title>{{ $branch->title }}</title>
+    <meta property="og:title" content="{{ $branch->title }}" />
     <meta name="keywords" content="{{ $branch->keyword }}">
     <meta name="description" content="{{ $branch->description }}">
 

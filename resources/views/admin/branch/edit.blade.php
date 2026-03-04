@@ -202,7 +202,7 @@
                                         <div class="col-sm-9 text-secondary">
                                             <input type="text" class="form-control" data-role="tagsinput"
                                                 name="keyword"
-                                                value="22K gold buyers,24K gold buyers,instant cash for gold,live gold rate" />
+                                                value="Best Gold Buyers,Sell Gold Today,Cash For Gold,Release Pledged Gold,Instant Cash For Gold,Old gold buyers,Sell Gold,Trusted Gold Buyers" />
                                         </div>
                                     </div>
 
@@ -213,7 +213,7 @@
                                             <h6 class="mb-0">Meta Description</h6>
                                         </div>
                                         <div class="col-sm-9 text-secondary">
-                                            <textarea class="form-control" id="input11" name="description" placeholder="Meta Description" rows="3"></textarea>
+                                            <textarea class="form-control" id="input11" name="description" placeholder="Meta Description" rows="3">{{ $data->description }}</textarea>
                                         </div>
                                     </div>
 
